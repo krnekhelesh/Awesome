@@ -106,6 +106,7 @@ theme.setting_icon = "/home/krnekhelesh/.config/awesome/themes/default/categorie
 theme.filebrowser_icon = "/home/krnekhelesh/.config/awesome/themes/default/categories/filebrowser.png"
 theme.terminal_icon = "/home/krnekhelesh/.config/awesome/themes/default/categories/terminal.png"
 theme.logout_icon = "/home/krnekhelesh/.config/awesome/themes/default/categories/restart.png"
+theme.screen_icon = "/home/krnekhelesh/.config/awesome/themes/default/categories/monitor.png"
 
 -- Awesome Category Icons
 theme.manual = "/home/krnekhelesh/.config/awesome/themes/default/awesomecategory/manual.png"

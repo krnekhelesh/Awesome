@@ -147,6 +147,7 @@ mymainmenu = awful.menu({ items = {
 	{ "File browser", "nautilus --browser --no-desktop", beautiful.filebrowser_icon},
         { "Open terminal", terminal, beautiful.terminal_icon },
 	{ "Awesome", myawesomemenu, beautiful.awesome_icon 	},
+	{ "Monitor", '/home/krnekhelesh/.config/awesome/choose_screen.sh', beautiful.screen_icon},
 	{ "Log out", '/home/krnekhelesh/.config/awesome/shutdown_dialog.sh', beautiful.logout_icon}},
                         })
 
@@ -567,7 +568,7 @@ end
 
 awful.util.spawn_with_shell("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1")
 run_once("nm-applet")
-awful.util.spawn_with_shell("/usr/bin/xrandr --output HDMI1 --mode 1920x1080 --left-of LVDS1")
+--awful.util.spawn_with_shell("/usr/bin/xrandr --output HDMI1 --mode 1920x1080 --right-of LVDS1")
 sleep=1
 awful.util.spawn_with_shell("/usr/bin/nitrogen --restore")
 awful.util.spawn_with_shell("/usr/bin/wmname LG3D")
