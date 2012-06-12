@@ -11,9 +11,6 @@ require("vicious")
 -- Dynamic Tagging
 require("eminent")
 
--- Load Debian menu entries
-require("debian.menu")
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -143,7 +140,6 @@ mymainmenu = awful.menu({ items = {
 	{ "Office", officemenu, beautiful.office_icon		},
 	{ "Programming", programmenu, beautiful.programming_icon	},
 	{ "Settings", settingsmenu, beautiful.setting_icon	}, 
-        --{ "Debian", debian.menu.Debian_menu.Debian },
 	{ "File browser", "nautilus --browser --no-desktop", beautiful.filebrowser_icon},
         { "Open terminal", terminal, beautiful.terminal_icon },
 	{ "Awesome", myawesomemenu, beautiful.awesome_icon 	},
@@ -514,15 +510,22 @@ awful.rules.rules = {
 		     size_hints_honor = false } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
+    { rule = { class = "Spotify" },
+      properties = { floating = false } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
-    { rule = { class = "gimp" },
+    { rule = { class = "Thunderbird", instance = "Mail", name = "Thunderbird Preferences" },
       properties = { floating = true } },
-    { rule = { class = "Firefox", instance = "Download" },
+    { rule = { class = "Thunderbird", instance = "Mail", name = "About Mozilla Thunderbird" },
+      properties = { floating = true } },
+    { rule = { class = "Firefox", instance = "Download", name = "Downloads" },
+      properties = { floating = true} },
+    { rule = { class = "Firefox", instance = "Browser", name = "Firefox Preferences" },
+      properties = { floating = true} },
+    { rule = { class = "Firefox", instance = "Places", name = "Library" },
+      properties = { floating = true} },
+    { rule = { class = "Firefox", instance = "Browser", name = "About Mozilla Firefox" },
       properties = { floating = true} }, 
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
 }
 -- }}}
 
