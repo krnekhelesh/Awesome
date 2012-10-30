@@ -1,7 +1,7 @@
 Awesome
 =======
 
-My Awesome WM Configuration. All the files required to setup a working awesome WM is available.
+My Awesome WM Configuration. All the files required to setup a working awesome WM is available. Editing this in Windows :)
 
 File Structure
 --------------
